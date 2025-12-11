@@ -1,11 +1,27 @@
 // src/index.js
 import "./styles.css";
 import  carregarInicio  from "./modulos/carregarInicio.js";
+import carregarMenu from './modulos/carregarMenu.js';
+
 import logo from './assets/logo.jpg';
 
 const content = document.getElementById('content');
-content.innerHTML = ''; // caso tenha algo antes
-content.appendChild(carregarInicio());
+function carregarPagina(pagina) {
+    content.innerHTML = "";   // limpa
+    content.appendChild(pagina());
+}
+
+// associar aos botões
+const btnInicio = document.getElementById('btn-inicio');
+const btnMenu = document.getElementById('btn-menu');
+
+btnInicio.addEventListener('click', () => carregarPagina(carregarInicio));
+btnMenu.addEventListener('click', () => carregarPagina(carregarMenu));
+
+
+
+// carregar a home ao iniciar
+carregarPagina(carregarInicio);
 
 // const img = document.getElementById('logo');
 // img.src = logo;
