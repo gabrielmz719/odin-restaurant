@@ -7,54 +7,67 @@ import xSalada from '../assets/x-salada.JPG';
 
 
 
+function criarCard(nome, imagem, ingredientes, preco) {
+    const card = document.createElement('div');
+    card.classList.add('item-card');
+
+    const h3 = document.createElement('h3');
+    h3.textContent = nome;
+
+    const img = document.createElement('img');
+    img.src = imagem;
+    img.alt = nome;
+
+    const lista = document.createElement('ul');
+    ingredientes.forEach(ing => {
+        const li = document.createElement('li');
+        li.textContent = ing;
+        lista.appendChild(li);
+    });
+
+    const pPreco = document.createElement('p');
+    pPreco.textContent = `Preço: ${preco}`;
+
+     card.appendChild(h3);
+    card.appendChild(img);
+    card.appendChild(lista);
+    card.appendChild(pPreco);
+
+    return card;
+}
 
 export default function carregarMenu() {
     const container = document.createElement('div');
     container.classList.add('menu-container');
 
     const titulo = document.createElement('h1');
-    titulo.textContent = "Menu";
+    titulo.textContent = "Cardápio";
 
     const tituloCategoria = document.createElement('h2');
     tituloCategoria.textContent = "Hambúrgueres";
 
-    // card do X-burguer
-    const card = document.createElement('div');
-    card.classList.add('item-card');
-
-    const nome = document.createElement('h3');
-    nome.textContent = "X-Burguer";
-
-    const ingredientes = document.createElement('ul');
-
-    const ing1 = document.createElement('li');
-    ing1.textContent = "Pão";
-
-    const ing2 = document.createElement('li');
-    ing2.textContent = "Carne 170g";
-
-    const ing3 = document.createElement('li');
-    ing3.textContent = "Queijo Mussarela";
-
-    ingredientes.appendChild(ing1);
-    ingredientes.appendChild(ing2);
-    ingredientes.appendChild(ing3);
-
-    const preco = document.createElement('p');
-    preco.textContent = "Preço: R$ 31,00";
-
-    const img = document.createElement('img');
-    img.src = xBurguer;
-    img.alt = "Imagem de um X-Burguer";
-
-    card.appendChild(nome);
-    card.appendChild(img);
-    card.appendChild(ingredientes);
-    card.appendChild(preco);
-
     container.appendChild(titulo);
-    container.appendChild(tituloCategoria);
-    container.appendChild(card);
+    // container.appendChild(categoria);
 
+    // Aqui criamos os cards
+    container.appendChild(
+        criarCard("X-Burguer", xBurguer,
+            ["Pão", "Carne 170g", "Queijo Mussarela"],
+            "R$ 31,00")
+    );
+
+    container.appendChild(
+        criarCard("X-Salada", xSalada,
+            ["Pão", "Carne 130g", "Queijo Mussarela", "Alface", "Molho de Tomate Caseiro"],
+            "R$ 33,00")
+    );
+
+    container.appendChild(
+        criarCard("X-Acebolado", xAcebolado,
+            ["Pão", "Dois Smash-Burguers prensado", "Queijo Mussarela", "Cebola"],
+            "R$ 34,00")
+    );
+
+    
     return container;
 }
