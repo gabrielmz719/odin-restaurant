@@ -3,9 +3,10 @@ import "./css/styles.css";
 import  carregarInicio  from "./modulos/carregarInicio.js";
 import carregarMenu from './modulos/carregarMenu.js';
 import carregarContato from "./modulos/carregarContato.js";
+import botaoTopo from "./modulos/botaoTopo.js";
 
 import logo from './assets/logo.jpg';
-
+botaoTopo();
 const content = document.getElementById('content');
 function carregarPagina(pagina) {
     content.innerHTML = "";   // limpa
@@ -26,6 +27,7 @@ btnContato.addEventListener('click', () => carregarPagina(carregarContato));
 
 // carregar a home ao iniciar
 carregarPagina(carregarInicio);
+
 
 // const img = document.getElementById('logo');
 // img.src = logo;
