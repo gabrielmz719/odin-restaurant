@@ -18,6 +18,10 @@ export default function carregarContato() {
     const imgLinkedin = document.createElement('img');
     imgLinkedin.src = linkedin;
     imgLinkedin.alt = 'Icone do Linkedin';
+    const linkLinkedin = document.createElement('a');
+    linkLinkedin.href = 'www.linkedin.com/in/gabrielzenerato';
+    linkLinkedin.textContent = "www.linkedin.com/in/gabrielzenerato";
+
 
 
     const h2Github = document.createElement('h2');
@@ -25,6 +29,9 @@ export default function carregarContato() {
     const imgGithub = document.createElement('img');
     imgGithub.src = github;
     imgGithub.alt = 'Icone do Github';
+    const linkGithub = document.createElement('a');
+    linkGithub.href = 'https://github.com/gabrielmz719';
+    linkGithub.textContent = "https://github.com/gabrielmz719";
 
 
 
@@ -33,15 +40,23 @@ export default function carregarContato() {
     const imgGmail = document.createElement('img');
     imgGmail.src = gmail;
     imgGmail.alt = 'Icone do Gmail';
+    const linkGmail = document.createElement('a');
+    linkGmail.textContent = "gabrielmzenerato242@gmail.com";
 
     container.appendChild(h2Github)
     container.appendChild(imgGithub)
+    container.appendChild(linkGithub)
+
 
     container.appendChild(h2Gmail)
     container.appendChild(imgGmail)
+    container.appendChild(linkGmail)
+
 
     container.appendChild(h2Linkedin)
     container.appendChild(imgLinkedin)
+    container.appendChild(linkLinkedin)
+
 
 
     
