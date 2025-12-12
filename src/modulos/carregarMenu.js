@@ -68,6 +68,23 @@ export default function carregarMenu() {
             "R$ 34,00")
     );
 
+    const tituloCategBatata = document.createElement('h2');
+    tituloCategoria.textContent = "Batatas";
+
+    container.appendChild(
+        criarCard("Batata Frita Tradicional", batata,
+            ["Batata"],
+            "R$ 10,00")
+    );
+
+    const tituloCategSobremesa = document.createElement('h2');
+    tituloCategoria.textContent = "Sobremesas";
+
+     container.appendChild(
+        criarCard("Colegial", colegial,
+            ["Duas bola de sorvete","Castanha","Chantilly"],
+            "R$ 14,00")
+    );
     
     return container;
 }

@@ -2,6 +2,7 @@
 import "./styles.css";
 import  carregarInicio  from "./modulos/carregarInicio.js";
 import carregarMenu from './modulos/carregarMenu.js';
+import carregarContato from "./modulos/carregarContato.js";
 
 import logo from './assets/logo.jpg';
 
@@ -14,9 +15,12 @@ function carregarPagina(pagina) {
 // associar aos botões
 const btnInicio = document.getElementById('btn-inicio');
 const btnMenu = document.getElementById('btn-menu');
+const btnContato = document.getElementById('btn-contato');
+
 
 btnInicio.addEventListener('click', () => carregarPagina(carregarInicio));
 btnMenu.addEventListener('click', () => carregarPagina(carregarMenu));
+btnContato.addEventListener('click', () => carregarPagina(carregarContato));
 
 
 
