@@ -1,0 +1,59 @@
+.inicio-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.inicio-texto {
+    flex: 1;
+    max-width: 600px;
+}
+
+.inicio-texto h1 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+}
+
+.inicio-texto p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.inicio-img {
+    width: 40rem;
+    height: auto;
+    border-radius: 12px;
+
+    animation: flutuar 3s ease-in-out infinite;
+    position: relative;
+
+    filter: drop-shadow(0 0 25px rgba(255, 180, 0, 0.9))
+            drop-shadow(0 0 10px rgba(255, 180, 0, 0.6));
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: -12px; /* sobe suavemente */
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+/* Responsivo — imagem vai para baixo em celulares */
+@media (max-width: 700px) {
+    .inicio-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inicio-img {
+        width: 70%;
+        max-width: 300px;
+    }
+}
