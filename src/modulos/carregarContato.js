@@ -57,9 +57,6 @@ export default function carregarContato() {
     container.appendChild(imgLinkedin)
     container.appendChild(linkLinkedin)
 
-
-
-    
     return container;
 
 }

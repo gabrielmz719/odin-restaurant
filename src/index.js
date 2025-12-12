@@ -1,5 +1,5 @@
 // src/index.js
-import "./styles.css";
+import "./css/styles.css";
 import  carregarInicio  from "./modulos/carregarInicio.js";
 import carregarMenu from './modulos/carregarMenu.js';
 import carregarContato from "./modulos/carregarContato.js";
