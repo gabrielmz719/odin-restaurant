@@ -47,7 +47,7 @@ export default function carregarMenu() {
     tituloCategoria.textContent = "Hambúrgueres";
 
     container.appendChild(titulo);
-    // container.appendChild(categoria);
+    
 
     // Aqui criamos os cards
     container.appendChild(
