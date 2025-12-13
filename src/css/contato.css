@@ -1,0 +1,62 @@
+h1{
+    text-align: center;
+    padding: 20px;
+}
+.contato-item {
+    display: flex;
+    background: #111;
+    border-radius: 14px;
+    /* padding: 18px 22px;
+    margin-bottom: 20px; */
+    margin: 40px;
+   justify-content: center;
+   align-items: center;
+   
+
+
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.6);
+}
+
+/* Linha superior: ícone + título */
+.contato-topo {
+    display: flex;
+     
+     justify-content: center;
+    
+    /* margin-bottom: 6px; */
+    
+
+}
+
+img {
+    width: 28px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 200, 70, 0.6));
+    padding: 20px 40px 20px 40px;
+
+
+    
+
+}
+
+.contato-topo h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0;
+}
+
+/* Link abaixo do título */
+.contato-item a {
+    display: block;
+    margin-left: 40px;
+    /* alinha com o texto, não com o ícone */
+    color: #ffb300;
+    /* cor que se destaca */
+    text-decoration: none;
+    font-size: 0.95rem;
+    word-break: break-word;
+}
+
+.contato-item a:hover {
+    text-decoration: underline;
+}

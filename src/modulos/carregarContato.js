@@ -6,57 +6,67 @@ import linkedin from '../assets/linkedin.png';
 
 
 
+function criarContato(tituloTexto, imagem, linkTexto, linkUrl) {
+    const bloco = document.createElement('div');
+    bloco.classList.add('contato-item');
+
+    const h2 = document.createElement('h2');
+    h2.textContent = tituloTexto;
+
+    const img = document.createElement('img');
+    img.src = imagem;
+    img.alt = `Ícone do ${tituloTexto}`;
+
+    const link = document.createElement('a');
+    link.textContent = linkTexto;
+
+    if (linkUrl) {
+        link.href = linkUrl;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+    }
+
+    bloco.appendChild(img);
+    bloco.appendChild(h2);
+    bloco.appendChild(link);
+
+    return bloco;
+}
+
 export default function carregarContato() {
     const container = document.createElement('div');
     container.classList.add('contato-container');
 
     const titulo = document.createElement('h1');
-    titulo.textContent = "Contate-nos";
+    titulo.textContent = "Contato";
+    container.appendChild(titulo);
 
-    const h2Linkedin = document.createElement('h2');
-    h2Linkedin.textContent = "Linkedin";
-    const imgLinkedin = document.createElement('img');
-    imgLinkedin.src = linkedin;
-    imgLinkedin.alt = 'Icone do Linkedin';
-    const linkLinkedin = document.createElement('a');
-    linkLinkedin.href = 'www.linkedin.com/in/gabrielzenerato';
-    linkLinkedin.textContent = "www.linkedin.com/in/gabrielzenerato";
+    container.appendChild(
+        criarContato(
+            "Github",
+            github,
+            "github.com/gabrielmz719",
+            "https://github.com/gabrielmz719"
+        )
+    );
 
+    container.appendChild(
+        criarContato(
+            "Gmail",
+            gmail,
+            "gabrielmzenerato242@gmail.com",
+            null
+        )
+    );
 
-
-    const h2Github = document.createElement('h2');
-    h2Github.textContent  = 'Github';
-    const imgGithub = document.createElement('img');
-    imgGithub.src = github;
-    imgGithub.alt = 'Icone do Github';
-    const linkGithub = document.createElement('a');
-    linkGithub.href = 'https://github.com/gabrielmz719';
-    linkGithub.textContent = "https://github.com/gabrielmz719";
-
-
-
-    const h2Gmail = document.createElement('h2');
-    h2Gmail.textContent = "Gmail";
-    const imgGmail = document.createElement('img');
-    imgGmail.src = gmail;
-    imgGmail.alt = 'Icone do Gmail';
-    const linkGmail = document.createElement('a');
-    linkGmail.textContent = "gabrielmzenerato242@gmail.com";
-
-    container.appendChild(h2Github)
-    container.appendChild(imgGithub)
-    container.appendChild(linkGithub)
-
-
-    container.appendChild(h2Gmail)
-    container.appendChild(imgGmail)
-    container.appendChild(linkGmail)
-
-
-    container.appendChild(h2Linkedin)
-    container.appendChild(imgLinkedin)
-    container.appendChild(linkLinkedin)
+    container.appendChild(
+        criarContato(
+            "LinkedIn",
+            linkedin,
+            "linkedin.com/in/gabrielzenerato",
+            "https://www.linkedin.com/in/gabrielzenerato"
+        )
+    );
 
     return container;
-
 }

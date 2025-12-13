@@ -77,8 +77,10 @@ export default function carregarMenu() {
             "R$ 10,00")
     );
 
+    
     const tituloCategSobremesa = document.createElement('h2');
     tituloCategoria.textContent = "Sobremesas";
+
 
      container.appendChild(
         criarCard("Colegial", colegial,
